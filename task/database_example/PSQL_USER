@@ -1,0 +1,4 @@
+CREATE USER:
+	
+create table invemtory.purchase(id serial integer promary key not null,product_name char(20) not null,product_qty integer not null,product_price integer not null);
+		

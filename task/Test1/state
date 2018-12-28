@@ -1,0 +1,20 @@
+DONE:- Created Class Product
+DONE:- Created Class Sale
+DONE:- Created Class Purchase
+DONE:- Created Class Manufacture
+DONE:- Created Class MyCompany
+DONE:- create_maufacure_order
+DONE:- start_manufacturing
+DONE:- done_manufacturing
+DONE:- create_purchase_order
+DONE:- confirm_purchase_order
+DONE:- create_sale_order
+DONE:- confirm sale_order
+DONE:- suggest_purchase
+DONE:- get_product_stock
+DONE:- get_most_selling_product
+DONE:- update_company_timezone
+DONE:- sale_purchase_account_data
+DONE:- get_sale_orders
+DONE:- get_manufacturing_orders
+Done:- get_purchase_orders

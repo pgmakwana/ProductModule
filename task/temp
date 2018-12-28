@@ -1,0 +1,208 @@
+
+product_obj.product_detail[product]['purchase_order_number']='PO/'+'0'*(5-len(str(purchase_number)))+str(purchase_number)
+
+
+
+"""
+class Dictionary_methods:
+        
+        sell_product={}
+        purchase_product={}
+        
+        def __init__(self):
+            """
+                func:- use for only assign product stock in dictionary in month wise sale or purchase 
+                param:- 
+                return:-
+            """
+            sell_product={'APRIL':'200', 'may':'200', 'JUN':'230', 'july':'210', 'august':'190', 'SEPTEMBER':'200', 'october':'230', 'NOVEMBER':'230', 'december':'210', 'january':'200','FEBRUARY':'230','march':'210'}
+            purchase_product={'APRIL':'200', 'may':'230', 'JUN':'200', 'july':'220', 'august':'190', 'SEPTEMBER':'200', 'october':'210', 'NOVEMBER':'230', 'december':'210', 'january':'200','FEBRUARY':'230','march':'210'}
+            
+        def get_producct_data(self,check_sorting_type):
+            """
+                func:- in this method 7 task are performed sorting different type of product data get monthly detail's as per instruction 
+                param:- check sorting type to which kind of data are sorted and it's datatype is integer   
+                return:-            
+            """
+            #1]Sort by Month alphabetically
+            if check_sorting_type == 1:
+                print("Sordet By dictionary key:",sorted(sell_product.keys()))
+                print("Sordet By dictionary key in reverse order:",sorted(sell_product.keys(),reverse=True))
+                
+            #2]Sort by it's Value               
+            elif check_sorting_type == 2:
+                print("Sordet By dictionary value:",sorted(sell_product.values()))
+                print("Sordet By dictionary value in reverse order:",sorted(sell_product.values(),reverse=True))
+             
+            #Get Key by sorting Values        
+            elif check_sorting_type == 3:
+                print("Get key by sorted value",sorted(sell_product,key=sell_product.__getitem__))
+            
+            #4]Sort by lower and upper key Value        
+            elif check_sorting_type == 4:
+                print("\nUpper case:")
+                for dict_key in sorted(sell_product.keys()):
+                    if str(dict_key).isupper() == True:
+                        print(dict_key)  
+                for dict_key in sorted(sell_product.keys()):
+                    if str(dict_key).islower() == True:
+                        print(dict_key)
+                        
+                print("\nLower case:")
+                for dict_key in sorted(sell_product.keys()):
+                    if not str(dict_key).isupper() == True:
+                        print(dict_key)  
+                for dict_key in sorted(sell_product.keys()):
+                    if str(dict_key).isupper() == True:
+                        print(dict_key)
+                
+            #5]Sort it by most Repeats Value        
+            elif check_sorting_type == 5:
+                
+                cnt = Counter(sell_product.values())
+                print(cnt)
+                max_value=max(cnt,key=cnt.get)
+                max_temp=0
+                for key,value in cnt.items():
+                    if max_temp==value:
+                        print(key)
+                    if key==max_value :
+                        print(key)
+                        max_temp=value
+                
+            #6] Sort it by Even and odd number of month.                
+            elif check_sorting_type == 6:
+    
+                print("\nEven:")                          
+                for dict_key in sell_product.keys():
+                    if 1%2 == 0:
+                        print(dict_key,":",sell_product[dict_key])
+                for dict_key in sell_product.keys():
+                    if not 1%2 == 0:
+                        print(dict_key,":",sell_product[dict_key])  
+                
+                print("\nOdd:") 
+                for dict_key in sell_product.keys():
+                    if not 1%2 == 0:
+                        print(dict_key,":",sell_product[dict_key])
+                for dict_key in sell_product.keys():
+                    if 1%2 == 0:
+                        print(dict_key,":",sell_product[dict_key])  
+               
+            #7]Sort it By Number of Days of month.
+            elif check_sorting_type == 7:
+                now = datetime.datetime.now()
+                temp_dictionary={}
+                for day_of_month in sell_product.keys():
+                    temp_dictionary[day_of_month]=calendar.monthrange(now.year, self.getMonthName(day_of_month))[1]
+                print(sorted(temp_dictionary,key=temp_dictionary.__getitem__),":",sorted(temp_dictionary.values()))
+         
+        def getMonthName(self,name):
+            """
+                func:- Get the name of month and return month number  
+                param:- name of month and it's datatye is string   
+                return:- return month number are inputed in integer
+            """
+            if name == "january"  : return 1
+            elif name == "FEBRUARY": return 2
+            elif name == "march": return 3
+            elif name == "APRIL": return 4
+            elif name == "may": return 5
+            elif name == "JUN": return 6
+            elif name == "july": return 7
+            elif name == "august": return 8
+            elif name == "SEPTEMBER": return 9
+            elif name == "october": return 10
+            elif name == "NOVEMBER": return 11
+            elif name == "december": return 12
+            
+            
+#create 'dictionary_methods_obj' object of Dictionary_methods class                  
+dictionary_methods_obj=Dictionary_methods()
+"""
+
+
+
+
+
+
+def get_xml_data(self,xml_filea_path): 
+        xml_document = minidom.parse(xml_filea_path)
+        itemlist = xml_document.getElementsByTagName('item')
+        print ("Text : ", itemlist[0].firstChild.nodeValue)
+        for s in itemlist :
+            print ("Attribute Name : ", s.attributes['name'].value)
+            print ("Text : ", s.firstChild.nodeValue)
+            
+    
+                    track={}
+                dict_as_temp=self.sell_product
+                for key,value in dict_as_temp.items():
+                    if value not in track:
+                        track[value]=0
+                    else:
+                        track[value]+=1
+                
+                print(max(track,key=track.get))
+                print(min(track,key=track.get))
+    
+    
+    
+        
+xml_data_manage_obj=XML_data_manage
+"""
+xml_file_path=input("\nEnter XML file Path:")
+
+#check the directory available or not in your system
+if os.path.isdir(xml_file_path) == True:        
+    #call to this method to get directory tree form from given this directory
+    
+    """
+xml_filea_path="item_xml.xml"
+xml_data_manareshge_obj.get_xml_data(xml_filea_path)
+
+
+
+
+
+
+csv_file = open('csv_file/product_detail.csv','w')        
+        writer = csv.writer(csv_file)
+        for key, value in self.product_detail.items():            
+            writer.writerow([key])            
+            writer.writerow("")
+            for sub_key in self.product_detail[key].keys():
+                writer.writerow(["",sub_key,self.product_detail[key][sub_key]])
+            writer.writerow("")
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+workbook = xlwt.Workbook(encoding = 'utf-8')        
+              
+        add_worksheet = workbook.add_sheet("Product")
+        row=1
+        col=1
+        for key, value in self.product_detail.items():            
+            col=1
+            add_worksheet.write(row,col,[key])
+            row+=2
+            col+=1            
+            add_worksheet.write(row,col,"")
+            row+=1
+            col+=1
+            for sub_key in self.product_detail[key].keys():                
+                add_worksheet.write(row,col,sub_key)
+                col+=1
+                add_worksheet.write(row,col,str(self.product_detail[key][sub_key]))                
+                row+=1
+            add_worksheet.write(row,col,"")
+        
+        workbook.save(os.path.join(os.getcwd(), 'csv_file/product_detail.csv'))
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        print("Difference of 2 second(quotient and the remainder)",divmod(first_date.seconds - second_date.seconds,60))
+print("Difference of 2 minute(quotient and the remainder)",divmod(first_date.seconds//60 - second_date.seconds//60,60))
+print("Difference of 2 hours(quotient and the remainder)",divmod((first_date.seconds//60)//60 - (second_date.seconds//60)//60,60))
+print("Difference of 2 days(quotient and the remainder)",divmod(((first_date.seconds//60)//60)//30 - ((second_date.seconds//60)//60)//30,30))
+print("Difference of 2 month(quotient and the remainder)",divmod((((first_date.seconds//60)//60)//30)//365 - (((second_date.seconds//60)//60)//30)//365,365))

@@ -1,0 +1,13 @@
+GOLD
+
+,24 K,"{'loss': 0, 'product_type': 'stock', 'product_price': 2391200.0, 'purchase_order_number': ['PO/00001'], 'product_quantity': 500, 'product_name': '24 K', 'profit': 0}"
+
+fan
+
+,usha,"{'loss': 0, 'product_type': 'stock', 'product_price': 8811.108400000001, 'purchase_order_number': ['PO/00001'], 'product_quantity': 900, 'product_name': 'usha', 'profit': 0}"
+
+mobile
+
+,samsung,"{'loss': 0, 'product_type': 'stock', 'product_price': 594343.3313, 'purchase_order_number': ['PO/00001', ['PO/00002']], 'product_quantity': 80, 'product_name': 'samsung', 'profit': 0}"
+,mi,"{'loss': 0, 'product_type': 'stock', 'product_price': 132166.6626, 'purchase_order_number': ['PO/00001'], 'product_quantity': 60, 'product_name': 'mi', 'profit': 0}"
+

@@ -1,0 +1,22 @@
+
+
+
+
+
+200
+250
+50
+600
+add new product add
+books
+cabinet
+file 1
+keyboard
+laptop
+laptop:10
+mouse
+pen
+product name
+product quantity
+product quantity
+sale product
